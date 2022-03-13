@@ -1,14 +1,12 @@
+import Sugestions from "./Sugestions";
+
 export default function Sidebar() {
   return (
     <div className="sidebar">
       <User />
-      <div className="sugestoes">
-        <div className="titulo">
-          Sugestões para você
-          <div>Ver tudo</div>
-        </div>
-        <Sugestion/>
-      </div>
+      <Sugestions />
+      <Links />
+      <Copyright />
     </div>
   );
 }
@@ -24,31 +22,16 @@ function User() {
     </div>
   );
 }
-const follow = [
-    { url: "assets/img/bad.vibes.memes.svg", name: "bad.vibes.memes" },
-    { url: "assets/img/chibirdart.svg", name: "chibirdart" },
-    { url: "assets/img/razoesparaacreditar.svg", name: "razoesparaacreditar" },
-    { url: "assets/img/adorable_animals.svg", name: "adorable_animals" },
-    { url: "assets/img/smallcutecats.svg", name: "smallcutecats" },
-];
-
-function Sugestion() {
-  
+function Links() {
   return (
-    <div className="sugestoes">
-      {follow.map((item) => (
-        <div className="sugestao">
-          <div className="usuario">
-            <img src= {item.url} alt={item.name} />
-            <div className="texto">
-              <div className="nome">{item.name}</div>
-              <div className="razao">Segue você</div>
-            </div>
-          </div>
-
-          <div className="seguir">Seguir</div>
-        </div>
-      ))}
+    <div className="links">
+      Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos •
+      Localizações • Contas mais relevantes • Hashtags • Idioma
     </div>
   );
+}
+function Copyright (){
+    return (
+        <div className="copyright">© 2021 INSTAGRAM DO FACEBOOK</div>
+    )
 }
