@@ -63,7 +63,7 @@ function PostTop(props) {
   return (
     <div className="topo">
       <div className="usuario">
-        <img src={icon} />
+        <img src={icon} alt={nameAuthor}/>
         {nameAuthor}
       </div>
       <div className="acoes">
@@ -75,13 +75,12 @@ function PostTop(props) {
 function PostMedia(props) {
   return (
     <div className="conteudo">
-      <img src={props.img} />
+      <img src={props.img} alt="media"/>
     </div>
   );
 }
 function PostBot(props) {
   const { iconComment, user, qtd } = props;
-    console.log(iconComment)
   return (
     <div className="fundo">
       <div className="acoes">
@@ -96,7 +95,7 @@ function PostBot(props) {
       </div>
 
       <div className="curtidas">
-        <img src={iconComment} />
+        <img src={iconComment} alt={user}/>
         <div className="texto">
           Curtido por <strong>{user}</strong> e{" "}
           <strong>outras {qtd} pessoas</strong>
