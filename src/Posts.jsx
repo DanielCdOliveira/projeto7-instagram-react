@@ -49,7 +49,7 @@ export default function Posts() {
 function Post(props) {
   const { icon, nameAuthor, img, infoPost } = props;
   const { iconComment, user, qtd } = infoPost;
- 
+
   return (
     <div className="post">
       <PostTop icon={icon} nameAuthor={nameAuthor} />
@@ -60,10 +60,11 @@ function Post(props) {
 }
 function PostTop(props) {
   const { icon, nameAuthor } = props;
+
   return (
     <div className="topo">
       <div className="usuario">
-        <img src={icon} alt={nameAuthor}/>
+        <img src={icon} alt={nameAuthor} />
         {nameAuthor}
       </div>
       <div className="acoes">
@@ -75,12 +76,13 @@ function PostTop(props) {
 function PostMedia(props) {
   return (
     <div className="conteudo">
-      <img src={props.img} alt="media"/>
+      <img src={props.img} alt="media" />
     </div>
   );
 }
 function PostBot(props) {
   const { iconComment, user, qtd } = props;
+
   return (
     <div className="fundo">
       <div className="acoes">
@@ -95,7 +97,7 @@ function PostBot(props) {
       </div>
 
       <div className="curtidas">
-        <img src={iconComment} alt={user}/>
+        <img src={iconComment} alt={user} />
         <div className="texto">
           Curtido por <strong>{user}</strong> e{" "}
           <strong>outras {qtd} pessoas</strong>

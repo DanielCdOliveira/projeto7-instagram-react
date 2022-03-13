@@ -1,20 +1,14 @@
 import ReactDOM from "react-dom";
 import Navbar from "./Navbar";
-import Sidebar from "./Sidebar";
-import Stories from "./Stories";
-import Posts from "./Posts";
+import Corpo from "./Corpo";
+import FundoMobile from "./FundoMobile";
 
 function App() {
   return (
-    <div className="root">
+    <div>
       <Navbar />
-      <div className="corpo">
-        <div className="esquerda">
-          <Stories />
-          <Posts />
-        </div>
-        <Sidebar />
-      </div>
+      <Corpo />
+      <FundoMobile />
     </div>
   );
 }
